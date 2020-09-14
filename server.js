@@ -14,7 +14,8 @@ app.use("/public", express.static(process.cwd() + "/public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(session({
+app.use(
+  session({
     secret: "shibly",
     resave: true,
     saveUninitialized: true,
@@ -29,14 +30,15 @@ app.set("view engine", "pug");
 app.set("views", "./views/pug");
 
 myDB(async client => {
-  const myDataBase = await client.db("database").collection("users");
+  const myDataBase = await client.db("fccAdvance").collection("passport");
 
   // Be sure to change the title
   app.route("/").get((req, res) => {
     //Change the response to render the Pug template
-    res.render("pug", {
+    res.render("index", {
       title: "Connected to Database",
-      message: "Please login"
+      message: "Please login",
+      showLogin: true
     });
   });
 
@@ -48,7 +50,7 @@ myDB(async client => {
 
   passport.deserializeUser((id, done) => {
     myDB.findOne({ _id: new ObjectId(id) }, (err, doc) => {
-      done(null, null);
+      done(null, doc);
     });
   });
 
