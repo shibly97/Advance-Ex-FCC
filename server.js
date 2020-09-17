@@ -19,7 +19,7 @@ app.use(
   session({
     secret: process.env.SECRET,
     resave: true,
-    saveUninitialized: true,
+    sveUninitialized: true,
     cookie: { secure: false }
   })
 );
