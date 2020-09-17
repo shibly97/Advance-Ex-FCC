@@ -3,7 +3,7 @@ require('dotenv').config();
 const { MongoClient } = require('mongodb');
 
 async function main(callback) {
-    const URI = 'mongodb+srv://shibly:JZ6cc8kcrmQKJulR@cluster0.9o7qq.mongodb.net/fccAdvance?retryWrites=true&w=majority' // Declare MONGO_URI in your .env file
+    const URI = process.env.MONGO // Declare MONGO_URI in your .env file
     const client = new MongoClient(URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
     try {
