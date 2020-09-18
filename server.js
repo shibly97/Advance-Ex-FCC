@@ -7,7 +7,7 @@ const passport = require("passport");
 const session = require("express-session");
 const ObjectId = require("mongodb").ObjectId;
 const LocalStrategy = require("passport-local");
-const bcrypt = require('bcrypt')
+const bcrypt = require('Bcrypt')
 
 const app = express();
 
@@ -74,7 +74,7 @@ myDB(async client => {
         if (!user) {
           return done(null, false);
         }
-        if (bcrypt.) {
+        if (bcrypt.compareSync(password,user.password)) {
           return done(null, false);
         }
         return done(null, user);
