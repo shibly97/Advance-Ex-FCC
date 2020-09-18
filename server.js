@@ -53,7 +53,14 @@ myDB(async client => {
     myDataBase.findOne({ _id: new ObjectId(id) }, (err, doc) => {
       done(null, doc);
     });
-  }); 
+  });
+  
+  function ensureAuthenticated(req,res,next){
+    if(req.isAuthenticated()){
+      next()
+    }
+    res.redirect('/')
+  }
   
   passport.use(new LocalStrategy((username,password,done)=>{
     myDataBase.findOne({username:username},(err,user)=>{
@@ -69,7 +76,7 @@ myDB(async client => {
     res.redirect("/profile")
   })  
   
-  app.get('/profile',(req,res)=>{
+  app.get('/profile',ensureAuthenticated,(req,res)=>{
     res.render('profile')
   })
 
