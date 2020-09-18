@@ -7,7 +7,7 @@ const passport = require("passport");
 const session = require("express-session");
 const ObjectId = require("mongodb").ObjectId;
 const LocalStrategy = require("passport-local");
-const bcrypt = require('Bcrypt')
+const bcrypt = require('bcrypt')
 
 const app = express();
 
