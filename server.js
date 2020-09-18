@@ -64,6 +64,10 @@ myDB(async client => {
       return done(null,user)
     })
   }))
+  
+  app.post('/login',passport.authenticate('local'),(req,res)=>{
+    res.render("profile")
+  })
 
   // Be sure to add this...
 }).catch(e => {
