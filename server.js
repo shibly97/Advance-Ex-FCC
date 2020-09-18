@@ -77,7 +77,8 @@ myDB(async client => {
   })  
   
   app.get('/profile',ensureAuthenticated,(req,res)=>{
-    res.render('profile')
+//     ************ check from where this user come from
+    res.render('profile',{username : req.user.username})
   })
 
   // Be sure to add this...
