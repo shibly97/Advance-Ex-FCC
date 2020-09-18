@@ -6,8 +6,8 @@ const fccTesting = require("./freeCodeCamp/fcctesting.js");
 const passport = require("passport");
 const session = require("express-session");
 const ObjectId = require("mongodb").ObjectId;
-const LocalStrategy = require('passport-local')
- 
+const LocalStrategy = require("passport-local");
+
 const app = express();
 
 fccTesting(app); //For FCC testing purposes
@@ -15,7 +15,7 @@ app.use("/public", express.static(process.cwd() + "/public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use( 
+app.use(
   session({
     secret: process.env.SECRET,
     resave: true,
@@ -54,32 +54,46 @@ myDB(async client => {
       done(null, doc);
     });
   });
-  
-  function ensureAuthenticated(req,res,next){
-    if(req.isAuthenticated()){
-      next()
+
+  function ensureAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+      next();
     }
-    res.redirect('/')
+    res.redirect("/");
   }
-  
-  passport.use(new LocalStrategy((username,password,done)=>{
-    myDataBase.findOne({username:username},(err,user)=>{
-      console.log('User '+ username +' attempted to log in.');
-      if(err){return done(err)}
-      if(!user){return done(null,false)}
-      if(password !== password){ return done(null,false)}
-      return done(null,user)
+
+  passport.use(
+    new LocalStrategy((username, password, done) => {
+      myDataBase.findOne({ username: username }, (err, user) => {
+        console.log("User " + username + " attempted to log in.");
+        if (err) {
+          return done(err);
+        }
+        if (!user) {
+          return done(null, false);
+        }
+        if (password !== password) {
+          return done(null, false);
+        }
+        return done(null, user);
+      });
     })
-  }))
-  
-  app.post('/login',passport.authenticate('local',{failureRedirect:'/'}),(req,res)=>{
-    res.redirect("/profile")
-  })  
-  
-  app.get('/profile',ensureAuthenticated,(req,res)=>{
-//     ************ check from where this user come from
-    res.render('profile',{username : req.user.username})
-  })
+  );
+
+  app.post(
+    "/login",
+    passport.authenticate("local", { failureRedirect: "/" }),
+    (req, res) => {
+      res.redirect("/profile");
+    }
+  );
+
+  app.get("/profile", ensureAuthenticated, (req, res) => {
+    //     ************ check from where this user come from
+    res.render("/profile", {
+      username: req.user.username
+    });
+  });
 
   // Be sure to add this...
 }).catch(e => {
