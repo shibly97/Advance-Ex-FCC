@@ -698,5 +698,140 @@
 	],
 	"registry.npmjs.org/uid-safe/2.1.5": [
 		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/passport-local/1.0.0": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/npm-packlist/1.4.8": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/npmlog/4.1.2": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/rimraf/2.7.1": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/mkdirp/0.5.5": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/detect-libc/1.0.3": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/nopt/4.0.3": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/osenv/0.1.5": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/npm-bundled/1.1.1": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/chownr/1.1.4": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/sax/1.2.4": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/fs-minipass/1.2.7": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/console-control-strings/1.1.0": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/set-blocking/2.0.0": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/glob/7.1.6": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/minipass/2.9.0": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/are-we-there-yet/1.1.5": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/minizlib/1.3.3": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/yallist/3.1.1": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/npm-normalize-package-bin/1.0.1": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/inflight/1.0.6": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/path-is-absolute/1.0.1": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/os-homedir/1.0.2": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/has-unicode/2.0.1": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/bcrypt/5.0.0": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/node-pre-gyp/0.15.0": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/needle/2.5.2": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/os-tmpdir/1.0.2": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/ignore-walk/3.0.3": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/delegates/1.0.0": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/gauge/2.7.4": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/aproba/1.2.0": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/string-width/1.0.2": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/code-point-at/1.1.0": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/is-fullwidth-code-point/1.0.0": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/number-is-nan/1.0.1": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/strip-ansi/3.0.1": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/ansi-regex/2.1.1": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/wide-align/1.1.3": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/string-width/2.1.1": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/strip-ansi/4.0.0": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/ansi-regex/3.0.0": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/fs.realpath/1.0.0": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/tar/4.4.13": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/node-addon-api/3.0.0": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
 	]
 }
