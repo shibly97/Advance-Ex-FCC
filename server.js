@@ -95,6 +95,18 @@ myDB(async client => {
     });
   });
 
+  app.get("/logout", (req, res) => {
+    req.logout();
+    res.redirect("/");
+  });
+
+  app.use((req, res, next) => {
+    res
+      .status(404)
+      .type("text")
+      .send("Not Found");
+  });
+
   // Be sure to add this...
 }).catch(e => {
   app.route("/").get((req, res) => {
