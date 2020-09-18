@@ -91,7 +91,7 @@ myDB(async client => {
 
   app.get("/profile", ensureAuthenticated, (req, res) => {
     //     ************ check from where this user come from
-    res.render("/profile", {
+    res.render(process.cwd() + "/views/pug/profile", {
       username: req.user.username
     });
   });
