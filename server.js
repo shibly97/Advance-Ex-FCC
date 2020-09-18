@@ -103,7 +103,8 @@ myDB(async client => {
   
   
   app.route('/register')
-  .post((req, res, next) => {
+  .post((
+    req, res, next) => {
     myDataBase.findOne({ username: req.body.username }, function(err, user) {
       if (err) {
         next(err);
