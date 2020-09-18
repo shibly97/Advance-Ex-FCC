@@ -65,8 +65,12 @@ myDB(async client => {
     })
   }))
   
-  app.post('/login',passport.authenticate('local'),(req,res)=>{
-    res.render("profile")
+  app.post('/login',passport.authenticate('local',{failureRedirect:'/'}),(req,res)=>{
+    res.redirect("/profile")
+  })  
+  
+  app.get('/profile',(req,res)=>{
+    res.render('profile')
   })
 
   // Be sure to add this...
