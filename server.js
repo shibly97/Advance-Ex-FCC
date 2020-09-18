@@ -74,7 +74,7 @@ myDB(async client => {
         if (!user) {
           return done(null, false);
         }
-        if (bcrypt.compareSync(password,user.password)) {
+        if (!bcrypt.compareSync(password,user.password)) {
           return done(null, false);
         }
         return done(null, user);
