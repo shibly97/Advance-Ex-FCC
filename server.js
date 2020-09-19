@@ -7,9 +7,9 @@ const passport = require("passport");
 const session = require("express-session");
 const ObjectId = require("mongodb").ObjectId;
 const LocalStrategy = require("passport-local");
-const bcrypt = require('bcrypt')
-const route = require('./route')
-const auth = require('./auth')
+const bcrypt = require("bcrypt");
+const routes = require("./routes");
+const auth = require("./auth");
 
 const app = express();
 
@@ -36,11 +36,12 @@ app.set("views", "./views/pug");
 myDB(async client => {
   const myDataBase = await client.db("fccAdvance").collection("passport");
 
+  auth(app, myDataBase, passport, ObjectId, LocalStrategy, bcrypt);
+  routes(app, myDataBase, passport, bcrypt);
   // Be sure to change the title
-  
+
   // Serialization and deserialization here...
 
-  
   // Be sure to add this...
 }).catch(e => {
   app.route("/").get((req, res) => {

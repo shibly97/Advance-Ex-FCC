@@ -1,5 +1,4 @@
-module.exports = function (app,myDataBase){
-  
+module.exports = function(app, myDataBase, passport, bcrypt) {
   app.route("/").get((req, res) => {
     //Change the response to render the Pug template
     res.render("index", {
@@ -9,14 +8,14 @@ module.exports = function (app,myDataBase){
       showRegistration: true
     });
   });
-  
+
   function ensureAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
       next();
     }
     res.redirect("/");
   }
-  
+
   app.post(
     "/login",
     passport.authenticate("local", { failureRedirect: "/" }),
@@ -41,7 +40,7 @@ module.exports = function (app,myDataBase){
   app.route("/register").post(
     (req, res, next) => {
       myDataBase.findOne({ username: req.body.username }, function(err, user) {
-        const hash = bcrypt.hashSync(req.body.password,12)
+        const hash = bcrypt.hashSync(req.body.password, 12);
         if (err) {
           next(err);
         } else if (user) {
@@ -77,5 +76,4 @@ module.exports = function (app,myDataBase){
       .type("text")
       .send("Not Found");
   });
-
-}
+};

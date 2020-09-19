@@ -1,4 +1,4 @@
-module.exports = function (app,myDataBase,passport,ObjectId,LocalStrategy,bcr){
+module.exports = function (app,myDataBase,passport,ObjectId,LocalStrategy,bcrypt){
   
   passport.serializeUser((user, done) => {
     done(null, user._id);
