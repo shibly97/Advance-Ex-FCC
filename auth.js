@@ -1,3 +1,5 @@
+const GitHubStratergy = require('passport-github')
+
 module.exports = function (app,myDataBase,passport,ObjectId,LocalStrategy,bcrypt){
   
   passport.serializeUser((user, done) => {
@@ -27,5 +29,11 @@ module.exports = function (app,myDataBase,passport,ObjectId,LocalStrategy,bcrypt
       });
     })
   );
+  
+  passport.use(new GitHubStratergy({
+    clientID : process.env.,
+    clientSecret : precess.env,
+    
+  },))
 
 }
