@@ -16,7 +16,7 @@ module.exports = function (app,myDataBase,passport,ObjectId,LocalStrategy,bcrypt
     new LocalStrategy((username, password, done) => {
       myDataBase.findOne({ username: username }, (err, user) => {
         console.log("User " + username + " attempted to log in.");
-        if (err) {
+        if (err) { 
           return done(err);
         }
         if (!user) {
@@ -31,9 +31,12 @@ module.exports = function (app,myDataBase,passport,ObjectId,LocalStrategy,bcrypt
   );
   
   passport.use(new GitHubStratergy({
-    clientID : process.env.,
-    clientSecret : precess.env,
-    
-  },))
+    clientID : process.env.GITHUB_CLIENT_ID,
+    clientSecret : process.env.GITHUB_CLIENT_SECRET,
+    callbackURL : 'https://advance-.glitch.me/auth/github/callback'
+  },function(accessToken,refreshToken,profile,cb){
+    console.log(profile)
+  }
+                                  ))
 
 }
