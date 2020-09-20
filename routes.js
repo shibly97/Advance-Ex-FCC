@@ -29,7 +29,7 @@ module.exports = function(app, myDataBase, passport, bcrypt) {
     //     ************ check from where this user come from
     // comes from authentication
     res.render(process.cwd() + "/views/pug/profile", {
-      username: req.user.username
+      username: req.user.username || req.user.name
     });
   });
 
