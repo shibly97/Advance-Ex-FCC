@@ -833,5 +833,29 @@
 	],
 	"registry.npmjs.org/node-addon-api/3.0.0": [
 		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/uid2/0.0.3": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/bcrypt/4.0.1": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/node-pre-gyp/0.14.0": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/node-addon-api/2.0.2": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/passport-github/1.1.0": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/passport-oauth2/1.5.0": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/base64url/3.0.1": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/oauth/0.9.15": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
 	]
 }

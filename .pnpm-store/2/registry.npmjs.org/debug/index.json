@@ -1,8 +1,8 @@
 {
 	"name": "debug",
 	"dist-tags": {
-		"latest": "4.1.1",
-		"beta": "4.2.0"
+		"latest": "4.2.0",
+		"beta": "4.3.0"
 	},
 	"versions": {
 		"0.0.1": {
@@ -1460,8 +1460,44 @@
 					"optional": true
 				}
 			}
+		},
+		"4.3.0": {
+			"name": "debug",
+			"version": "4.3.0",
+			"dependencies": {
+				"ms": "2.1.2"
+			},
+			"devDependencies": {
+				"brfs": "^2.0.1",
+				"browserify": "^16.2.3",
+				"coveralls": "^3.0.2",
+				"istanbul": "^0.4.5",
+				"karma": "^3.1.4",
+				"karma-browserify": "^6.0.0",
+				"karma-chrome-launcher": "^2.2.0",
+				"karma-mocha": "^1.3.0",
+				"mocha": "^5.2.0",
+				"mocha-lcov-reporter": "^1.2.0",
+				"xo": "^0.23.0"
+			},
+			"dist": {
+				"integrity": "sha512-jjO6JD2rKfiZQnBoRzhRTbXjHLGLfH+UtGkWLc/UXAh/rzZMyjbgn0NcfFpqT8nd1kTtFnDiJcrIFkq4UKeJVg==",
+				"shasum": "efa41cbf14fc9448075367fdaaddf82376da211e",
+				"tarball": "https://registry.npmjs.org/debug/-/debug-4.3.0.tgz",
+				"fileCount": 7,
+				"unpackedSize": 41047,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfZcMNCRA9TVsSAnZWagAAca0P/0uEMRazUGSIRnfEa4kU\npiVvI22IM6VpAb961QfclCfHQtFi/MN7Ejx8Sr7moQkA4tDgqoYcQI0Vp0iI\nmp0n8MGnMZBE5Dzlg1jBjXZUXu/DNbNMEN4y9o3GQ5l1NDprQh3Q+2uLsqrU\nk5eunsfydEs9/O8kW+2W3a5vw/u0rw3YBMOvhD3kGhAs9tK1szf22Kl66MXb\n/uKhPylOnpwL08bAPoj6pVZ3yF8XTT4gRaDwMH6kykeioV518dU36SCMZSXC\njJW8WKzsIawZt3hPm0XKUJrnexDEs9/4ixkwyCDW1aAtncYLZaw3K3AXvQnX\nxTZQ3KJ7JqdQRmnfhaWPBVCHN0tZuzuNqSoNtYWRxPWjC4upgmNMQLSvAORY\nPf5nPv4m+A50UyXT5/szOmZySjZ+5CmGWWGlymM+qGV8d6u/7E8cB4+sjeSq\nRGLlHZi1yglJ8GJoSVzkE85Tqm6klZ4GO58sc60u03uouBT1njdedCCvY9A6\nEWVgv+p4aTMwjDt8A/0/TyM25958YAvzgURWKJLGIAv++vsMUsaK9SAO+9D/\ne8MBPcmZFEohHq2n30HUUAhBPVIglId+q5YsKGXgrsziEFr8mLs5HKIZQGyH\nkhXGn0HmoIQDvtVwbEQyhlXfG8ERr0Jmg/NDZ/BuIj7AvoPn/GN9GYv6S7Lb\nYETR\r\n=W19k\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"engines": {
+				"node": ">=6.0"
+			},
+			"peerDependenciesMeta": {
+				"supports-color": {
+					"optional": true
+				}
+			}
 		}
 	},
-	"modified": "2020-05-19T09:51:30.667Z",
-	"cachedAt": 1600431782908
+	"modified": "2020-09-19T08:36:31.802Z",
+	"cachedAt": 1600592082890
 }
