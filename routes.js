@@ -73,13 +73,9 @@ module.exports = function(app, myDataBase, passport, bcrypt) {
 
   app.get("/auth/github", passport.authenticate("github"));
 
-  app.get(
-    "/auth/github/callback",
-    passport.authenticate("github", { failureRedirect: "/" }),
-    (req, res) => {
-      res.redirect("/profile");
-    }
-  );
+ app.route('/auth/github/callback').get(passport.authenticate('github', { failureRedirect: '/' }), (req, res) => {
+    res.redirect('/profile');
+  });
 
   app.use((req, res, next) => {
     res
