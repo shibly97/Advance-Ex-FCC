@@ -43,7 +43,7 @@ myDB(async client => {
   routes(app, myDataBase, passport, bcrypt);
   
   io.on('connection', socket =>{
-    console.log('')
+    console.log('user connected')
   })
 
   // Be sure to add this...
