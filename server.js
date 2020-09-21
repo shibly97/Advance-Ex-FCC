@@ -47,7 +47,12 @@ myDB(async client => {
   io.on('connection', socket =>{
     currentUsers ++
     io.emit('user count', currentUsers)
-    console.log('user connected')
+    
+    socket.on('disconnect', ()=>{
+      currentUsers --
+      io.emit('user count', currentUsers)
+    })
+    
   })
 
   // Be sure to add this...
