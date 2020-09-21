@@ -12,7 +12,7 @@ module.exports = function(app, myDataBase, passport, bcrypt) {
 
   function ensureAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
-      next();
+      return next();
     }
     res.redirect("/");
   }

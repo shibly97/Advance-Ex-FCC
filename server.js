@@ -42,7 +42,11 @@ myDB(async client => {
   auth(app, myDataBase, passport, ObjectId, LocalStrategy, bcrypt);
   routes(app, myDataBase, passport, bcrypt);
   
+  let currentUsers = 0
+  
   io.on('connection', socket =>{
+    currentUsers ++
+    io.emit('user count', currentUsers)
     console.log('user connected')
   })
 
