@@ -857,5 +857,8 @@
 	],
 	"registry.npmjs.org/oauth/0.9.15": [
 		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
+	],
+	"registry.npmjs.org/node-addon-api/3.0.2": [
+		"/rbd/pnpm-volume/f817a2b4-54bd-4259-a44a-a18cb192886b"
 	]
 }

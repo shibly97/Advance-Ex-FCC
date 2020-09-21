@@ -41,9 +41,10 @@ myDB(async client => {
 
   auth(app, myDataBase, passport, ObjectId, LocalStrategy, bcrypt);
   routes(app, myDataBase, passport, bcrypt);
-  // Be sure to change the title
-
-  // Serialization and deserialization here...
+  
+  io.on('connection', socket =>{
+    console.log('')
+  })
 
   // Be sure to add this...
 }).catch(e => {
