@@ -79,13 +79,13 @@ myDB(async client => {
     currentUsers++;
     io.emit("user", {currentUsers,
                     connected: true,
-                    user : socket.request.user.name});
+                    user : socket.request.user.username});
     
     // console.log('user ' + socket.request.user.name + ' connected');
     
     
      socket.on('chat message', (message) => {
-      io.emit('chat message', { name: socket.request.user.name, message });
+      io.emit('chat message', { name: socket.request.user.username, message });
     });
 
     socket.on("disconnect", () => {
