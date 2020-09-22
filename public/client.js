@@ -1,22 +1,17 @@
-$(document).ready(function () {
-
+$(document).ready(function() {
   let socket = io();
-  
-  socket.on('user', (data)=>{
-    $('#num-users').text(data.currentUsers + 'Users are online');
-    let message = data.connected? data.user + "Joined the chat" : data.user + "Left the chat"
-  })
 
-    // Form submittion with new message in field with id 'm'
-    $('form').submit(function () {
-        var messageToSend = $('#m').val();
-        //send message to server here?
-        $('#m').val('');
-        return false; // prevent form submit from refreshing page
-    });
+  socket.on("user", data => {
+    $("#num-users").text(data.currentUsers + " User(s) are online");
+    let message = data.user + (data.connected ? " Joined the chat" : " Left the chat");
+    $("#messages").append($("<li>").html("<br>" + message + "</br>"));
+  });
 
-
- 
+  // Form submittion with new message in field with id 'm'
+  $("form").submit(function() {
+    var messageToSend = $("#m").val();
+    //send message to server here?
+    $("#m").val("");
+    return false; // prevent form submit from refreshing page
+  });
 });
-
-
