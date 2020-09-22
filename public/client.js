@@ -7,10 +7,15 @@ $(document).ready(function() {
     $("#messages").append($("<li>").html("<br>" + message + "</br>"));
   });
   
-  socket.on('chat update', (message) =>{
-    console.log('2nt' + message)
-    $('#messages').append($("<li>").html("<br>"+ message.name+": "+ message.message)+"/<br>")
-  })
+  socket.on('chat message', (data) =>{
+    console.log('2nt')
+    $('#messages').append($("<li>").html("<br>"+ data.name+": "+ data.message)+"/<br>")
+  });
+  
+  // socket.on('chat message', (data) => {
+  //   console.log('socket.on 1');
+  //   $('#messages').append($('<li>').text(`${data.name}: ${data.message}`));
+  // });
 
   // Form submittion with new message in field with id 'm'
   $("form").submit(function() {
