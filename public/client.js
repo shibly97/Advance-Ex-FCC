@@ -2,8 +2,9 @@ $(document).ready(function () {
 
   let socket = io();
   
-  socket.on('user count', (data)=>{
-    console.log(data)
+  socket.on('user', (data)=>{
+    $('#num-users').text(data.currentUsers + 'Users are online');
+    let message = data.connected? data.user + "Joined the chat" : data.user + "Left the chat"
   })
 
     // Form submittion with new message in field with id 'm'
