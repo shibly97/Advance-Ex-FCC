@@ -16,14 +16,24 @@ const app = express();
 const http = require('http').createServer(app)
 const io = require('socket.io')(http)
 const passportSocketIo = require('passport.socketio')
+const cookieParser = require('cookie-parser')
 
 const MongoStore = require('connect-mongo')(session)
 const URI = process.env.MONGO
 const store = new MongoStore({url : URI})
 
-io.use({
-  
+io.use(
+  passportSocketIo.authorize({
+    cookieParser : cookieParser,
+    key : 'express.sid',
+    secret : process.env.SECRET,
+    store : store,
+    success : onAuthorizeSuccess,
+    fail : onAuthorizeFail
 })
+)
+
+
 
 fccTesting(app); //For FCC testing purposes
 app.use("/public", express.static(process.cwd() + "/public"));
