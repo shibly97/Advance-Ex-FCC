@@ -6,6 +6,11 @@ $(document).ready(function() {
     let message = data.user + (data.connected ? " Joined the chat" : " Left the chat");
     $("#messages").append($("<li>").html("<br>" + message + "</br>"));
   });
+  
+  socket.on('chat update', (message) =>{
+    console.log('2nt' + message)
+    $('#messages').append($("<li>").html("<br>"+ message.name+": "+ message.message)+"/<br>")
+  })
 
   // Form submittion with new message in field with id 'm'
   $("form").submit(function() {
@@ -16,8 +21,5 @@ $(document).ready(function() {
     return false; // prevent form submit from refreshing page
   });
   
-  socket.on('chat message', message =>{
-    console.log(message)
-    $('#messages').append($("<li>").html("<br>"+ message.name+": "+ message.message)+"/<br>")
-  })
+  
 });

@@ -83,11 +83,9 @@ myDB(async client => {
     
     // console.log('user ' + socket.request.user.name + ' connected');
     
-    socket.on('chat message', message =>{
+    socket.on('chat message', (message) =>{
       console.log("1st"+ message)
-      io.emit('chat message',{
-        name : socket.request.user.name,
-        message: message
+      io.emit('chat update',{name : socket.request.user.name, message
       })
     })
 
