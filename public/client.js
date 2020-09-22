@@ -16,7 +16,8 @@ $(document).ready(function() {
     return false; // prevent form submit from refreshing page
   });
   
-  io.on('chat message', message =>{
+  socket.on('chat message', message =>{
+    console.log(message)
     $('#messages').append($("<li>").html("<br>"+ message.name+": "+ message.message)+"/<br>")
   })
 });

@@ -81,12 +81,13 @@ myDB(async client => {
                     connected: true,
                     user : socket.request.user.name});
     
-    console.log('user ' + socket.request.user.name + ' connected');
+    // console.log('user ' + socket.request.user.name + ' connected');
     
     socket.on('chat message', message =>{
+      console.log("1st"+ message)
       io.emit('chat message',{
         name : socket.request.user.name,
-        message
+        message: message
       })
     })
 
