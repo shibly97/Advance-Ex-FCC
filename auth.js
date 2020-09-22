@@ -1,4 +1,5 @@
 const GitHubStrategy = require("passport-github").Strategy;
+const GoogleStrategy = require('passport-google-oauth20').Strategy
 
 module.exports = function(
   app,
@@ -61,9 +62,32 @@ module.exports = function(
           {upsert:true, new: true},
           (err, doc) => {
             return cb(null, doc.value);
-          }
+          } 
 );
       }
     )
   );
+  
+   passport.use(new GoogleStrategy({
+        clientID : process.env.GOOGLE_ID,
+        clientSecret : process.env.GOOGLE_SECRET,
+        callbackURL : 'http://localhost:8080/auth/google/callback' 
+      },(accessToken,refreshToken,profile,cb)=>{
+         myDataBase.findOneAndUpdate(
+           {refId : profile.id},
+           {$set:{refId : profile.id,
+                  username : profile.displayName,
+                  // photo: profile.photo[0].value || ''
+          }},
+           {upsert : true, returnOriginal: false},
+           (err,docCreated)=>{
+             if(err){return console.log(err)}
+             else{
+               return cb(null, docCreated.value)
+             }
+           }
+           )
+      }))
+  
+  
 };

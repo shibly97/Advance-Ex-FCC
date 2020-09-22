@@ -77,7 +77,7 @@ module.exports = function(app, myDataBase, passport, bcrypt) {
     res.redirect('/chat');
   });
   
-   app.get("/auth/google", passport.authenticate("google",{scope : ['profile']}));
+   app.get("/auth/google", passport.authenticate("google",));
 
   app.route('/auth/google').get(passport.authenticate('google', { failureRedirect: '/' }), (req, res) => {
     res.redirect('/chat');
