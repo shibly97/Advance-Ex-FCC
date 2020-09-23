@@ -27,7 +27,7 @@ app.use("/public", express.static(process.cwd() + "/public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(
+app.use( 
   session({
     secret: process.env.SECRET,
     resave: true,
@@ -105,4 +105,4 @@ myDB(async client => {
 // app.listen out here...
 http.listen(process.env.PORT || 3000, () => {
   console.log("Listening on port " + process.env.PORT);
-});
+}); 

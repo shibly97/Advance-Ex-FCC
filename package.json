@@ -26,8 +26,7 @@
     "connect-mongo" : "^3.2.0",
     "passport.socketio": "^3.7.0",
     "cookie-parser": "^1.4.5",
-    "passport-google-oauth": "^2.0.0",
-    
+    "passport-google-oauth": "^2.0.0"
   },
   "repository": {
     "type": "git",
